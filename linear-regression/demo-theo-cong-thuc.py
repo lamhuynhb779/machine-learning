@@ -3,9 +3,42 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # height (cm)
+"""
+[[147]
+ [150]
+ [153]
+ [158]
+ [163]
+ [165]
+ [168]
+ [170]
+ [173]
+ [175]
+ [178]
+ [180]
+ [183]]
+"""
 X = np.array([[147, 150, 153, 158, 163, 165, 168, 170, 173, 175, 178, 180, 183]]).T
 # weight (kg)
+"""
+[[49]
+ [50]
+ [51]
+ [54]
+ [58]
+ [59]
+ [60]
+ [62]
+ [63]
+ [64]
+ [66]
+ [67]
+ [68]]
+"""
 Y = np.array([[ 49, 50, 51,  54, 58, 59, 60, 62, 63, 64, 66, 67, 68]]).T
+
+print(X)
+print(Y)
 
 # Visualize data 
 plt.plot(X, Y, 'ro')
@@ -104,4 +137,3 @@ y2 = w_1*160 + w_0
 
 print( u'Predict weight of person with height 155 cm: %.2f (kg), real number: 52 (kg)'  %(y1) )
 print( u'Predict weight of person with height 160 cm: %.2f (kg), real number: 56 (kg)'  %(y2) )
-
