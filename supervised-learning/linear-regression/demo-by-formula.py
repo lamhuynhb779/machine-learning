@@ -35,13 +35,13 @@ X = np.array([[147, 150, 153, 158, 163, 165, 168, 170, 173, 175, 178, 180, 183]]
  [67]
  [68]]
 """
-Y = np.array([[ 49, 50, 51,  54, 58, 59, 60, 62, 63, 64, 66, 67, 68]]).T
+y = np.array([[ 49, 50, 51,  54, 58, 59, 60, 62, 63, 64, 66, 67, 68]]).T
 
 print(X)
-print(Y)
+print(y)
 
 # Visualize data 
-plt.plot(X, Y, 'ro')
+plt.plot(X, y, 'ro')
 
 # # Set axis
 xmin = 140
@@ -99,7 +99,7 @@ Xbar = np.concatenate((one, X), axis = 1)
 
 # Calculating weights of the fitting line 
 A = np.dot(Xbar.T, Xbar)
-b = np.dot(Xbar.T, Y)
+b = np.dot(Xbar.T, y)
 """
 Chú ý: giả nghịch đảo của một ma trận A trong Python sẽ được tính bằng numpy.linalg.pinv(A)
 Với pinv là từ viết tắt của pseudo inverse.
@@ -117,7 +117,7 @@ y0 = w_0 + w_1*x0
 
 # Drawing the fitting line
 # data
-plt.plot(X.T, Y.T, 'ro')
+plt.plot(X.T, y.T, 'ro')
 # the fitting line
 plt.plot(x0, y0)
 
